@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home of padel</title>
+    <script src="fEnd.js" defer></script>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body class="Container">
+
+    <header>
+        <h1 class ="LogoText">Home Of Padel</h1>
+        <nav class = "navigation">
+            <p>Located in Sweden</p>
+        </nav>
+    </header>
+
+    <h2>Book your time!</h2>
+    <form action="/add-user" id = "user-form" method="post">
+
+        <div class ="inputBox">
+        <label for="nameInput" id="name"> Name:</label>
+        <input type="text" name="name" id="nameInput" required>
+        
+
+        
+        <label for="mailInput" id ="mail"> Email:</label>
+        <input type="text" name="mail" id="mailInput" required>
+        </div>
+
+        <div class ="selectOptions">
+        <label for="day">Day:</label>
+        <select id="dayInput" name="day" required>
+        <option value="">Choose Day</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+        </select>
+
+
+        
+        <label for="time">Time:</label>
+        <select id="timeInput" name="time" required>
+        <option value="">Choose Time</option>
+        <option value="12.00">12.00</option>
+        <option value="13.30">13.30</option>
+        <option value="15.00">15.00</option>
+        <option value="16.30">16.30</option>
+        <option value="18.00">18.00</option>
+        <option value="19.30">19.30</option>
+        <option value="21.00">21.00</option>
+        <option value="22.30">22.30</option>
+        </select>
+        
+
+        
+      <label for="court">Court:</label>
+      <select id="courtInput" name="court" required>
+      <option value="">Choose Court</option>
+      <option value="Court 1">Court 1</option>
+      <option value="Court 2">Court 2</option>
+      <option value="Court 3">Court 3</option>
+      <option value="Court 4">Court 4</option>
+      <option value="Court 5">Court 5</option>
+      <option value="Court 6">Court 6</option>
+      <option value="Court 7">Court 7</option>
+      <option value="Court 8">Court 8</option>
+      <option value="Court 9">Court 9</option>
+      <option value="Court 10">Court 10</option>
+      </select>
+
+
+        </div>
+
+        <button type ="submit" id = "btnBook"> Book</button>
+
+    </form>
+
+    <div>
+
+    <h3 id="textForBookings"> Show occupied times </h3> 
+    
+    </div>
+
+    <div id="bookings-container">
+    <table id="bookingsTable" class ="tbBook">
+        
+      <thead>
+        
+        <tr>
+            
+            <th>Name:</th>
+            <th>Time:</th>
+            <th>Day:</th>
+            <th>Court:</th>
+            
+            
+        </tr>
+             
+    
+      </thead>
+
+      <tbody id ="bookings-table-tbody">
+        
+        
+      </tbody>
+    </table>
+    </div>
+    <button id ="showBkn">Show</button>
+    <footer>
+        <p id="footer">&copy; 2023 Home of padel AB. All rights reserved.</p>
+     </footer>
+</body>
+</html>
